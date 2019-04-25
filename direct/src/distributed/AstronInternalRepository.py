@@ -667,7 +667,7 @@ class AstronInternalRepository(ConnectionRepository):
         should be used whenever such an interesting in-game event occurs.
         """
 
-        if self.eventSocket is None:
+        if self.eventSocket is not None:
             return # No event logger configured!
 
         log = collections.OrderedDict()
